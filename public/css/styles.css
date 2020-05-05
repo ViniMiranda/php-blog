@@ -1,0 +1,60 @@
+/* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+.row.content {
+  height: 200vh;
+}
+
+/* Set gray background color and 100% height */
+.sidenav {
+  background-color: rgb(41, 43, 48);
+  height: 100%;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+  background-color: #555;
+  color: white;
+  padding: 15px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+
+  .row.content {
+    height: auto;
+  }
+}
+
+.conteudo{
+  box-shadow: 4px 7px 15px -4px rgba(0,0,0,0.75);
+  border-radius: 10px;
+}
+.comentarios{
+  box-shadow: 4px 7px 15px -4px rgba(0,0,0,0.75);
+  border-radius: 10px;
+}
+.comentario{
+  box-shadow: 4px 7px 15px -4px rgba(0,0,0,0.75);
+  border-radius: 10px;
+}
+.resposta{
+
+}
+.artigos{
+  
+}
+.red{
+  color: crimson;
+  text-shadow: 2px 2px 5px crimson;
+}
+.green{
+  color: rgb(0, 136, 5);
+  text-shadow: 2px 2px 5px rgb(0, 136, 5);
+}
+.purple{
+  color: blueviolet;
+  text-shadow: 2px 2px 5px blueviolet;
+}
