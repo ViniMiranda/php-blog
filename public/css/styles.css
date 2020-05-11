@@ -28,33 +28,19 @@ footer {
   }
 }
 
-.conteudo{
-  box-shadow: 4px 7px 15px -4px rgba(0,0,0,0.75);
+.conteudo {
+  box-shadow: 4px 7px 15px -4px rgba(0, 0, 0, 0.75);
   border-radius: 10px;
 }
-.comentarios{
-  box-shadow: 4px 7px 15px -4px rgba(0,0,0,0.75);
+.comentarios {
+  box-shadow: 4px 7px 15px -4px rgba(0, 0, 0, 0.75);
   border-radius: 10px;
 }
-.comentario{
-  box-shadow: 4px 7px 15px -4px rgba(0,0,0,0.75);
+.comentario {
+  box-shadow: 4px 7px 15px -4px rgba(0, 0, 0, 0.75);
   border-radius: 10px;
 }
-.resposta{
-
-}
-.artigos{
-  
-}
-.red{
+.red {
   color: crimson;
   text-shadow: 2px 2px 5px crimson;
-}
-.green{
-  color: rgb(0, 136, 5);
-  text-shadow: 2px 2px 5px rgb(0, 136, 5);
-}
-.purple{
-  color: blueviolet;
-  text-shadow: 2px 2px 5px blueviolet;
 }
