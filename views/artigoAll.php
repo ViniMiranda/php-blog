@@ -5,7 +5,7 @@
     <?php foreach ($artigos as $artigo) { ?>
 
         <ul>
-            <a href="./?id=<?= $artigo->id ?>"><?= $artigo->titulo ?></a>
+            <a href="./?ArtigoId=<?= $artigo->id ?>"><?= $artigo->titulo ?></a>
         </ul>
 
     <?php } ?>

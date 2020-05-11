@@ -20,7 +20,25 @@ class Comentario extends Database
     public function listAll()
     {
         //query
-        $sql = ("SELECT c.mensagem, c.dataPostagem, u.usuario FROM comentario c JOIN artigo a ON c.artigoId = a.id JOIN usuario u ON c.usuarioId = u.id WHERE a.id = ?");
+        $sql = ("
+        
+            SELECT
+                c.mensagem,
+                c.dataPostagem,
+                u.usuario
+            FROM
+                comentario c
+            JOIN artigo a ON
+                c.artigoId = a.id
+            JOIN usuario u ON
+                c.usuarioId = u.id
+            WHERE
+                a.id = ?
+            ORDER BY
+                dataPostagem
+            ASC
+        
+        ");
 
         $stmt = $this->connect()->prepare($sql);
 
@@ -35,11 +53,11 @@ class Comentario extends Database
 
     public function create()
     {
-        $sql = ("INSERT INTO comentarios(id,mensagem,dataPostagem,parentId,usuarioId,artigoId) VALUES(NULL,?,NOW(),?,?,?)");
+        $sql = ("INSERT INTO comentario(id,mensagem,dataPostagem,usuarioId,artigoId) VALUES(NULL,?,NOW(),2,?)");
 
         $stmt = $this->connect()->prepare($sql);
 
-        $stmt->execute([$this->mensagem, $this->parentId, $this->usuarioId, $this->artigoId]);
+        $stmt->execute([$this->mensagem, $this->artigoId]);
     }
 
     //getters and setters

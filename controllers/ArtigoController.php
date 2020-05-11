@@ -1,7 +1,7 @@
 <?php
 require_once("models/ArtigoModel.php");
 
-class ArtigosController
+class ArtigoController
 {
     //listagem de todos os artigos
     public function listAll()
@@ -20,12 +20,12 @@ class ArtigosController
             //checando se tem id  na url
             //se nao tiver mostrar a lista de artigos
 
-            if (is_null($_GET['id'])) {
+            if (is_null($_GET['ArtigoId'])) {
                 $this->listAll();
                 die();
             } else {
                 try {
-                    $obj->setId($_GET['id']);
+                    $obj->setId($_GET['ArtigoId']);
                     $artigo = $obj->read();
 
                     include(__DIR__ . "/../views/artigoRead.php");
@@ -34,6 +34,7 @@ class ArtigosController
                 }
             }
         } catch (Exception $e) {
+            echo ("Ops algo deu errado");
         }
     }
 }

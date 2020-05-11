@@ -5,7 +5,7 @@ class Database
     protected function connect()
     {
         //requerindo config.php
-        require_once(__DIR__ . "/../config/config.php");
+        require_once(__DIR__ . "/../includes/config.php");
 
         try {
             //dbh = Database Handle

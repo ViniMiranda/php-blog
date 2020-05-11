@@ -1,10 +1,10 @@
 <?php
 header("Content-Type: text/html; charset=utf-8");
-require_once("controllers/ArtigosController.php");
-require_once("controllers/ComentariosController.php");
+require_once("controllers/ArtigoController.php");
+require_once("controllers/ComentarioController.php");
 
-$artigosController = new ArtigosController();
-$comentariosController = new ComentariosController();
+$artigoController = new ArtigoController();
+$comentarioController = new ComentarioController();
 ?>
 
 <!DOCTYPE html>
@@ -35,22 +35,36 @@ $comentariosController = new ComentariosController();
 
                 <!-- Conteudo -->
 
-                <?php $artigosController->read() ?>
+                <?php $artigoController->read() ?>
 
                 <!-- Formulario de comentarios -->
 
-                <?php $comentariosController->create() ?>
-                -
+
+                <?php
+
+                if (isset($_GET['class']) && isset($_GET['action'])) {
+                    $controller = $_GET['class'] . 'Controller';
+                    $action = $_GET['action'];
+                } else {
+                    $controller = 'ComentarioController';
+                    $action = 'create';
+                }
+                //formando o caminho do arquivo controller e instanciando-o
+                require_once "controllers/" . $controller . ".php";
+                $app = new $controller();
+                //executando acao
+                $app->$action();
+                ?>
 
                 <!-- Comentarios -->
 
-                <?php $comentariosController->listAll() ?>
+                <?php $comentarioController->listAll() ?>
 
             </div>
 
             <!-- Artigos -->
             <div class="col-sm-3 sidenav">
-                <?php $artigosController->listAll() ?>
+                <?php $artigoController->listAll() ?>
             </div>
         </div>
     </div>
