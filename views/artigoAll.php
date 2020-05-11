@@ -1,6 +1,6 @@
-<div class="text-white">
-    <h2>Outros Artigos</h2>
-    <hr />
+<div class="blue">
+    <h2 class="font-weight-bold">Todos Artigos</h2>
+    <hr class="linha-dark" />
 
     <?php foreach ($artigos as $artigo) { ?>
 

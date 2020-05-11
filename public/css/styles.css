@@ -5,13 +5,13 @@
 
 /* Set gray background color and 100% height */
 .sidenav {
-  background-color: rgb(41, 43, 48);
+  background-color: rgb(170, 173, 179);
   height: 100%;
 }
 
 /* Set black background color, white text and some padding */
 footer {
-  background-color: #555;
+  background-image: linear-gradient(to right, rgb(0, 110, 255), rgb(5, 49, 70));
   color: white;
   padding: 15px;
 }
@@ -40,7 +40,25 @@ footer {
   box-shadow: 4px 7px 15px -4px rgba(0, 0, 0, 0.75);
   border-radius: 10px;
 }
-.red {
-  color: crimson;
-  text-shadow: 2px 2px 5px crimson;
+.nome-usuario {
+  color: rgb(13, 75, 133);
+  text-shadow: 1px 1px 3px rgb(6, 56, 85);
+}
+.gray {
+  color: rgb(182, 182, 182);
+}
+.jumbotron {
+  background-color: rgb(7, 61, 82);
+  font-family: "Jost", sans-serif;
+}
+.blue {
+  color: rgb(16, 35, 70);
+}
+.linha-light {
+  border: 10px solid rgb(185, 185, 185);
+  border-radius: 4px;
+}
+.linha-dark {
+  border: 1px solid rgb(22, 22, 22);
+  border-radius: 4px;
 }
