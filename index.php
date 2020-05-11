@@ -22,9 +22,10 @@ $comentariosController = new ComentariosController();
 
 <body>
 
-    <div class="jumbotron text-white text-center">
-        <h1>Lendas dos esportes</h1>
-    </div>
+    <!-- Header -->
+
+    <?php include(__DIR__ . "/includes/header.php"); ?>
+
     <div class="container-fluid">
         <div class="row content">
             <div class="col-sm-3"></div>
